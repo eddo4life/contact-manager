@@ -93,7 +93,7 @@
     <h1>Add a New Contact</h1>
     <hr>
 
-    <form action="/contacts" method="POST">
+    <form action="/contact" method="POST">
         @csrf
         <label for="name">Name</label>
         <input type="text" id="name" name="name" placeholder="Enter contact name">

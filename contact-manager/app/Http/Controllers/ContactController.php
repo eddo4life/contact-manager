@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contact;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -14,7 +15,16 @@ class ContactController extends Controller
     {
         return view('contact.create');
     }
-    public function store(Request $request) {}
+    public function store(Request $request) {
+        $contact = new Contact();
+        $contact->user_id = 1;
+        $contact->name = request("name");
+        $contact->email = request("email");
+        $contact->phone = request("phone");
+
+        // $contact->save();
+        return redirect('/contact')->with("message", $contact->name." saved successfully");
+    }
 
     public function show($id) {}
     public function edit($id) {}
