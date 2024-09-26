@@ -21,7 +21,7 @@ class ContactController extends Controller
         $contact->name = request("name");
         $contact->email = request("email");
         $contact->phone = request("phone");
-
+        error_log($contact);
         // $contact->save();
         return redirect('/contact')->with("message", $contact->name." saved successfully");
     }

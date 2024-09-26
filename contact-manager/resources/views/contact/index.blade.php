@@ -2,7 +2,9 @@
 
 @section('content')
     <div id="app">
-        <contact-index></contact-index>
+        <div id="app">
+            <contact-index :contacts="{{ json_encode($contacts) }}" :message="{{ json_encode(session('message')) }}"></contact-index>
+        </div>
     </div>
 @endsection
 
