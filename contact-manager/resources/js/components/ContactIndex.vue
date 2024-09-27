@@ -60,7 +60,7 @@
   .container {
     display: flex;
     flex-direction: column;
-    height: 100vh; /* Full height */
+    height: 95vh; /* Full height */
     position: relative; /* Enable absolute positioning for child elements */
   }
   
@@ -75,7 +75,7 @@
     overflow-y: auto;
     margin: 0 auto;
     background-color: white;
-    position: relative; /* Needed for absolute positioning of the button */
+    position: relative; /* Needed for sticky positioning of the button */
   }
   
   .contact-card {

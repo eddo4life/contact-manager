@@ -9,7 +9,7 @@ class ContactController extends Controller
 {
     public function index()
     {
-        return view('contact.index', ['contacts' => $this->getContacts()]);
+        return view('contact.index', ['contacts' => Contact::all()]);
     }
     public function create()
     {
@@ -21,12 +21,10 @@ class ContactController extends Controller
         $contact->name = request("name");
         $contact->email = request("email");
         $contact->phone = request("phone");
-        error_log($contact);
-        // $contact->save();
+        $contact->save();
         return redirect('/contact')->with("message", $contact->name." saved successfully");
     }
 
-    
 
     public function show($id) {}
     public function edit($id) {}
