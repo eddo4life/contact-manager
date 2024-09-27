@@ -1,7 +1,6 @@
 <template>
     <div class="container">
       <h1>Contact List ({{ contacts.length }})</h1>
-      <hr />
       <div class="contact-list">
         <div class="contact-card" v-for="contact in contacts" :key="contact.id">
           <div class="profile-picture">
@@ -60,12 +59,12 @@
   .container {
     display: flex;
     flex-direction: column;
-    height: 95vh; /* Full height */
-    position: relative; /* Enable absolute positioning for child elements */
+    height: 90vh; 
+    position: relative; 
   }
   
   .contact-list {
-    flex: 1; /* Takes up remaining space */
+    flex: 1; 
     width: 80%;
     max-width: 600px;
     max-height: 70vh;
@@ -75,7 +74,7 @@
     overflow-y: auto;
     margin: 0 auto;
     background-color: white;
-    position: relative; /* Needed for sticky positioning of the button */
+    position: relative; 
   }
   
   .contact-card {
