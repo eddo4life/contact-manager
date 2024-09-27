@@ -21,7 +21,7 @@ class ContactController extends Controller
     }
 
     $contacts = Contact::where('user_id', $user->id)->get(); 
-
+    
     return view('contact.index', [
         'contacts' => $contacts,
         'currentUserName' => $user->name,

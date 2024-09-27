@@ -3,7 +3,7 @@
 @section('content')
     <div id="app">
         <div id="app">
-            <contact-index :contacts="{{ json_encode($contacts) }}" :message="{{ json_encode(session('message')) }}"></contact-index>
+            <contact-index :contacts="{{ json_encode($contacts) }}" :currentusername="{{ json_encode($currentUserName) }}" :message="{{ json_encode(session('message')) }}"></contact-index>
         </div>
     </div>
 @endsection

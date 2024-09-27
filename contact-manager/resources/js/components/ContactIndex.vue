@@ -1,5 +1,6 @@
 <template>
     <div class="container">
+        <span class="username">[{{ currentusername }}]</span>
       <h1>Contact List ({{ contacts.length }})</h1>
       <div class="contact-list">
         <div class="contact-card" v-for="contact in contacts" :key="contact.id">
@@ -33,6 +34,10 @@
         type: String,
         default: '',
       },
+      currentusername:{
+        type: String,
+        default: '',
+      }
     },
     methods: {
       getInitial(name) {
@@ -55,7 +60,10 @@
     text-align: center;
     color: #333;
   }
-  
+  .username {
+    font-weight: bold;
+}
+
   .container {
     display: flex;
     flex-direction: column;
