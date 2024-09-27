@@ -26,6 +26,8 @@ class ContactController extends Controller
         return redirect('/contact')->with("message", $contact->name." saved successfully");
     }
 
+    
+
     public function show($id) {}
     public function edit($id) {}
     public function update(Request $request, $id) {}
