@@ -58,7 +58,7 @@ To link the storage folder, run the following command:
 
         php artisan storage:link
 
-(This solve an unexpected 419 error)
+(Backpack Specific Issues: If you’re encountering a 419 error after upgrading to Backpack 6 and Laravel 10, it might be related to the new Basset library or your local environment setup. Ensure that you run php artisan storage:link to create the necessary asset directories)
 
 ### 7. Compile Assets
 To compile the front-end assets, run:
